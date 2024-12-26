@@ -1,0 +1,7 @@
+The following CSS rule might cause unexpected behavior in some browsers:
+
+```css
+div { width: calc(100% - 10px); }
+```
+
+The issue arises when the parent element of the `div` does not have a defined width.  `calc()` expressions rely on the context of the parent element's dimensions; if undefined, it could lead to incorrect calculations and unexpected layout.
