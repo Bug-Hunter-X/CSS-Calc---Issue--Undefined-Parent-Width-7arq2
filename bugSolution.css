@@ -1,0 +1,25 @@
+To fix this, ensure that the parent element has a defined width.  You can achieve this through various methods such as setting a fixed width, using percentage widths, or using other layout mechanisms such as flexbox or grid.  Here's an example using a fixed width on the parent:
+
+```css
+.parent {
+  width: 500px;
+}
+
+div {
+  width: calc(100% - 10px);
+}
+```
+
+Alternatively, use flexbox or grid for more robust layout control:
+
+```css
+.parent {
+  display: flex;
+}
+
+div {
+  width: calc(100% - 10px);
+  flex: 1;
+}
+```
+This ensures the `calc()` function has the necessary context to accurately calculate the width of the `div` element.
